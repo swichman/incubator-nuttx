@@ -2920,7 +2920,7 @@ endif
 if ARCH_BOARD_MIRTOO
 source "boards/mips/pic32mx/mirtoo/Kconfig"
 endif
-f ARCH_BOARD_P32MX270f256B_BARE
+if ARCH_BOARD_P32MX270F256B_BARE
 source "boards/mips/pic32mx/p32mx270f256b_bare/Kconfig"
 endif
 if ARCH_BOARD_PIC32MX_STARTERKIT
