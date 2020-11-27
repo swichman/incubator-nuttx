@@ -21,260 +21,64 @@ PIC32MX250F128D Pin Out
 
 PIC32MX250F128D 44 pin package.
 
-PIN PIC32 SIGNAL(s)                                  BOARD SIGNAL/USAGE                  EV-Kit1 CONNECTION
---- ------------------------------------------------ ---------------------------------- ----------------------------------
- 1  RPB9/SDA1/CTED4/PMD3/RB9                         FUNC3                              FUNC3, to X3, pin3
-    RPB9      Peripheral pin selection RB9
-    SDA1      I2C1 data
-    CTED4     CTMU External Edge Input 4
-    PMD3      Parallel Master Port data bit 3
-    RB9       PORTB, Pin 9
---- ------------------------------------------------ ---------------------------------- ----------------------------------
- 2  RPC6/PMA1/RC6                                    FUNC5                              FUNC5, to X3, pin5
-    RPC6      Peripheral pin selection RC6
-    PMA1      Parallel Master Port Address bit 1
-    RC6       PORTC, Pin 6
---- ------------------------------------------------ ---------------------------------- ----------------------------------
- 3  RPC7/PMA0/RC7                                    PEN, PGA117 ENA pin                Not available off module
-    RPC7      Peripheral pin selection RC7           Not available
-    PMA0      Parallel Master Port Address bit 0     Not available
-    RC7       PORTC, Pin 7                           Used for PGA117 ENA output
---- ------------------------------------------------ ---------------------------------- ----------------------------------
- 4  RPC8/PMA5/RC8                                    LED0                               Not available off module
-    RPC8      Peripheral Selection, PORTC, Pin 8     Not available
-    PMA5      Parallel Master Port Address bit 5     Not available
-    RC8       PORTC, Pin 8                           Used to drive LED0
---- ------------------------------------------------ ---------------------------------- ----------------------------------
- 5  RPC9/CTED7/PMA6/RC9                              LED1                               Not available off module
-    RPC9      Peripheral Selection, PORTC, Pin 9     Not available
-    CTED7     CTMU External Edge Input 7             Not available
-    PMA6      Parallel Master Port Address bit 6     Not available
-    RC9       PORTC, Pin 9                           Used to drive LED1
---- ------------------------------------------------ ---------------------------------- ----------------------------------
- 6  VSS                                              VSS                                Not available off module
---- ------------------------------------------------ ---------------------------------- ----------------------------------
- 7  VCAP                                             VCAP                               Not available off module
---- ------------------------------------------------ ---------------------------------- ----------------------------------
- 8  PGED2/RPB10/D+/CTED11/RB10                       FUNC0                              FUNC0, to FT230XS RXD and debug port
-    PGED2    Debug Channel 2 data                                                       Used at boot time for ICD3
-    RPB10    Peripheral Selection, PORTB, Pin 10                                        Used for UART RXD
-    D+       USB D+                                                                     Not available
-    CTED11   CTMU External Edge Input 11                                                Not available
-    RB10     PORTB, Pin 10                                                              Not available
---- ------------------------------------------------ ---------------------------------- ----------------------------------
- 9  PGEC2/RPB11/D-/RB11                              FUNC1                              FUNC1, to FT230XS TXD
-    PGEC2    Debug Channel 2 clock                                                      Used at boot time for ICD3
-    RPB11    Peripheral Selection, PORTB, Pin 11                                        Used for UART TXD
-    D-       USB D-                                                                     Not available
-    RB11     PORTB, Pin 11                                                              Not available
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-10  VUSB3V3                                          3.3V                               (via VBAT, Pin 1)
-    VUSB3V3  USB internal transceiver supply         3.3V
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-11  AN11/RPB13/CTPLS/PMRD/RB13                       ~CSM SST25VF3032B Chip Select      Not available off-module
-    AN11     Analog input channel 11                 Not available
-    RPB13    Peripheral Selection, PORTB, Pin 12     Not available
-    CTPLS    CTMU Pulse Output                       Not available
-    PMRD     Parallel Master Port read strobe        Not available
-    RB13     PORTB, Pin 12                           Used for SST25VF3032B Chip Select
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-12  PGED/TMS/PMA10/RA10                              DIN5                               PORT5, to X7, pin 2
-    PGED4    Debug Channel 4 data                    (?)                                 (also X13, pin6)
-    TMS      JTAG Test mode select pin               (?)
-    PMA10    Parallel Master Port Address bit 10     Not available
-    RA10     PORTA, Pin 10                           May be used as GPIO input
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-13  PGEC/TCK/CTED8/PMA7/RA7                          DIN2                               PORT2, to X4, pin 2
-    PGEC4    Debug Channel 4 clock                   Not available                       (also X13, pin5)
-    TCK      JTAG test clock input pin               May be used as JTAG clock input
-    CTED8    CTMU External Edge Input 8              May be used as CTMU input
-    PMA7     Parallel Master Port Address bit 7      Not available
-    RA7      PORTA, Pin 7                            May be used as GPIO input
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-14  CVREF/AN10/C3INB/RPB14/VBUSON/SCK1/CTED5/RB14    FUNC5 (through resistor)           FUNC5, to X3, pin5
-    CVREFOUT Comparator Voltage Reference output
-    AN10     Analog input channel 10
-    C3INB    Comparator 3 Input B
-    RPB14    Peripheral Selection, PORTB, Pin 14
-    VBUSON   USB Host and OTG bus power control
-    SCK1     SPI1 clock
-    CTED5    CTMU External Edge Input 5
-    RB14      PORTB, Pin 14
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-15  AN9/C3INA/RPB15/SCK2/CTED6/PMCS1/RB15            SCK                                Not available off module
-    AN9      Analog input channel 9                  Not available
-    C3INA    Comparator 3 Input A                    Not available
-    RPB15    Peripheral Selection, PORTB, Pin 15     Not available
-    SCK2     SPI2 clock                              Used for SPI2 clock
-    CTED6    CTMU External Edge Input 6              Not available
-    PMCS1    Parallel Master Port Chip Select 1      Not available
-    RB15     PORTB, Pin 15                           Not available
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-16  AVSS                                             AVSS                               Not available off module
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-17  AVDD                                             AVDD                               Not available off module
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-18  ~MCLR                                            ~MCLR, TC2030-NL, pin 1            Not available off module
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-19  PGED3/VREF+/CVREF+/AN0/C3INC/RPA0/CTED1/PMD7/RA0 AIN PGA117 Vout
-    AN0      Analog input channel 0                  AIN
-    RA0      PORTA, Pin 0                            Not available
-    CVREF+   Comparator Voltage Reference (high)     (?)
-    C3INC    Comparator 3 Input C                    (?)
-    PMD7     Parallel Master Port data bit 7         Not available
-    CTED1    CTMU External Edge Input 1              Not available
-    PGED3    Debug Channel 3 data                    Not available
-    VREF+    Analog voltage reference (high)         Not available
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-20  PGEC3/VREF-/CVREF-/AN1/RPA1/CTED2/PMD6/RA1       SI                                 Not available off module
-    PGEC3    Debug Channel 3 clock                   Not available
-    VREF-    Analog voltage reference (low)          Not available
-    CVREF-   Comparator Voltage Reference (low)      Not available
-    AN1      Analog input channel 1                  Not available
-    RPA1     Peripheral Selection PORTA, Pin 1       Used for SI
-    CTED2    CTMU External Edge Input 2              Not available
-    PMD6     Parallel Master Port data bit 6         Not available
-    RA1      PORTA, Pin 1                            Not available
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-21  PGED1/AN2/C1IND/C2INB/C3IND/RPB0/PMD0/RB0        DIN6                               PORT6, to X9, pin 2
-    PGED1    Debug Channel 1 data                    Not available                       (also X13, pin4)
-    AN2      Analog input channel 2                  Not available (digital input only)
-    C1IND    Comparator 1 Input D                    Not available (digital input only)
-    C2INB    Comparator 2 Input B                    Not available (digital input only)
-    C3IND    Comparator 3 Input D                    Not available (digital input only)
-    RPB0     Peripheral Selection PORTB, Pin 0       May be used for peripheral input
-    PMD0     Parallel Master Port data bit 0         Not available
-    RB0      PORTB, Pin 0                            May be used for GPIO input
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-22  PGEC1/AN3/C1INC/C2INA/RPB1/CTED12/PMD1/RB1       DIN7                               PORT7, to X10, pin 2
-    PGEC1    Debug Channel 1 clock                   (?)                                 (also X13, pin2)
-    AN3      Analog input channel 3                  Not available (digital input only)
-    C1INC    Comparator 1 Input C                    Not available (digital input only)
-    C2INA    Comparator 2 Input A                    Not available (digital input only)
-    RPB1     Peripheral Selection, PORTB, Pin 1      May be used for peripheral input
-    PMD1     Parallel Master Port data bit 1         Not available
-    CTED12   CTMU External Edge Input 12             May be used as CTMU input
-    RB1      PORTB, Pin 1                            May be used as GPIO input
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-23  AN4/C1INB/C2IND/RPB2/SDA2/CTED13/PMD2/CNB2/RB2   DOUT0                              PORT0, to X1, pin 2
-    AN4      Analog input channel 4                  Not available (digital output only) (also X13, pin1)
-    C1INB    Comparator 1 Input B                    Not available (digital output only)
-    C2IND    Comparator 2 Input D                    Not available (digital output only)
-    RPB2     Peripheral Selection PORTB, Pin 2       May be used for peripheral output
-    SDA2     I2C2 data                               Not available(?)
-    CTED13   CTMU External Edge Input 13             Not available
-    PMD2     Parallel Master Port data bit 2         Not available
-    CNB2     PORTB, Pin 2 Change Notification        Not available
-    RB2      PORTB, Pin 2                            May be for GPIO output
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-24  AN5/C1INA/C2INC/RTCC/RPB3/SCL2/PMWR/CNB3/RB3     DOUT1                              PORT1, to X2, pin 2
-    AN5      Analog input channel 5                  Not available (digital output only) (also X13, pin3)
-    C1INA    Comparator 1 Input A                    Not available (digital output only)
-    C2INC    Comparator 2 Input C                    Not available (digital output only)
-    RTCC     Real-Time Clock alarm output            May be used for RTCC output
-    RPB3     Peripheral Selection, PORTB, Pin 3      May be used for peripheral output
-    SCL2     I2C2 clock                              (?)
-    PMWR     Parallel Master Port write strobe       Not available
-    CNB3     PORTB, Pin 3 Change Notification        Not available
-    RB3      PORTB, Pin 3                            May be used for GPIO output
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-25  AN6/RPC0/RC0                                     DOUT3                              PORT3, to X5, pin 2
-    AN6      Analog input channel 6                  Not available (digital output only) (also X13, pin7)
-    RPC0     Peripheral Selection, PORTC, Pin 0      May be used for peripheral output
-    RC0      PORTC, Pin 0                            May be used for GPIO output
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-26  AN7/RPC1/RC1                                     DOUT4                              PORT4, to X6, pin 2
-    AN7      Analog input channel 7                  Not available (digital output only) (also X13, pin8)
-    RPC1     Peripheral Selection, PORTC, Pin 1      May be used for peripheral output
-    RC1      PORTC, Pin 1                            May be used for GPIO output
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-27  AN8/RPC2/PMA2/RC2                                DOUT5                              PORT5, to X7, pin 2
-    AN8      Analog input channel 8                  Not available (digital output only) (also X13, pin6)
-    RPC2     Peripheral Selection, PORTC, Pin 2      May be used for peripheral output
-    PMA2     Parallel Master Port Address bit 2      Not available
-    RC2      PORTC, Pin 2                            May be used for GPIO output
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-28  VDD                                              VDD                                Not available off module
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-29  VSS                                              VSS                                Not available off module
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-30  OSC1/CLKI/RPA2/RA2                               SO (R1) DIN0 (R2)                  Not available off module
-    OSC1     Oscillator crystal input                Not available
-    CLKI     External clock source input             Not available
-    RPRA2    Peripheral Selection PORTA, Pin 2       Used for SO
-    RA2      PORTA, Pin 2                            Not available
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-31  OSC2/CLKO/RPA3/RA3                               DIN0 (R1) DIN3 (R2)                PORT0, to X1, pin 2
-    OSC2     Oscillator crystal output               Not available                       (also X13, pin1)
-    CLKO     Oscillator crystal output               Not available
-    RPA3     Peripheral Selection for PORTA, Pin 3   May be used for peripheral input
-    RA3      PORTA, Pin 3                            May be used for GPIO input
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-32  TDO/RPA8/PMA8/RA8                                DIN3 (R1) S0 (R2)                  PORT3, to X5, pin 2
-    TDO      JTAG test data output pin               Not available                       (also X13, pin7)
-    RPA8     PORTA, Pin 8                            May be used for peripheral input
-    PMA8     Parallel Master Port Address bit 8      Not available
-    RA8      PORTA, Pin 8                            May be used for GPIO input
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-33  SOSCI/RPB4/RB4                                   DOUT2                              PORT2, to X4, pin 2
-    SOSCI    32.768 kHz crystal input                Not available                       (also X13, pin5)
-    RPB4     Peripheral Seclection, PORTB, Pin 4     May be used for peripheral output
-    RB4      PORTB, Pin 4                            May be used for GPIO output
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-34  SOSCO/RPA4/T1CK/CTED9/RA4                        DIN1                               PORT1, to X2, pin 2
-    SOSCO    32.768 kHz crystal output               Not available                       (also X13, pin3)
-    RPA4     Peripheral Selection PORTA, Pin 4       May be used for peripheral input
-    T1CK     Timer1 external clock input             May be used for timer 1 input
-    CTED9    CTMU External Edge Input 9              May be used for CTMU input
-    RA4      PORTA, Pin 4                            May be used as GPIO input
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-35  TDI/RPA9/PMA9/RA9                                DIN4                               PORT4, to X6, pin 2
-    TDI      JTAG test data input pin                May be used for JTAG input          (also X13, pin8)
-    RPA9     Peripheral Selection for PORTA, Pin 9   May be used for peripheral input
-    PMA9     Parallel Master Port Address bit 9      Not available
-    RA9      PORTA, Pin 9                            May be used for GPIO input
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-36  AN12/RPC3/RC3                                    DOUT6                              PORT6, to X9, pin 2
-    AN12     Analog input channel 12                 Not available (digtial output only) (also X13, pin4)
-    RPC3     Peripheral Selection, PORTC, Pin 3      May be used for peripheral output
-    RC3      PORTC, Pin 3                            May be used for GPIO output
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-37  RPC4/PMA4/RC4                                    DOUT7                              PORT7, to X10, pin 2
-    RPC4     Peripheral Selection, PORTC, Pin 4      May be used for peripheral output   (also X13, pin2)
-    PMA4     Parallel Master Port Address bit 4      Not available
-    RC4      PORTC, Pin 4                            May be used for GPIO output
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-38  RPC5/PMA3/RC5                                    FUNC4                              FUNC4, to X3, pin4
-    RPC5     Peripheral Selection, PORTC, Pin 5
-    PMA3     Parallel Master Port Address bit 3
-    RC5      PORTC, Pin 5
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-39  VSS                                              VSS                                Not available off module
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-40  VDD                                              VDD                                Not available off module
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-41  RPB5/USBID/RB5                                   FUNC3                              FUNC3, to X3, pin3
-    RPB5     Peripheral Selection, PORTB, Pin 5
-    USBID    41  USB OTG ID detect
-    RB5      41  PORTB, Pin 5
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-42  VBUS                                             FUNC2                              FUNC2, to X3, pin2
-    VBUS     Analog USB bus power monitor
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-43  RPB7/CTED3/PMD5/INT0/RB7                         PGA117 ~CSAI                       Not available off module
-    RPB7     Peripheral Selection, PORTB, Pin 7
-    CTED3    CTMU External Edge Input 3
-    PMD5     Parallel Master Port data bit 5
-    INT0     External Interrupt 0
-    RB7      PORTB, Pin 7
---- ------------------------------------------------ ---------------------------------- ----------------------------------
-44  RPB8/SCL1/CTED10/PMD4/RB8                        FUNC2                              FUNC2
-    RPB8     PORTB, Pin 8
-    SCL1     I2C1 clock
-    CTED10   CTMU External Edge Input 10
-    PMD4     Parallel Master Port data bit 4
-    RB8      PORTB, Pin 8
---- ------------------------------------------------ ---------------------------------- ----------------------------------
+PIN PIC32 SIGNAL(s)                                  NuttX Function
+--- ------------------------------------------------ ----------------------------------
+ 1  ~MCLR                                            Keep high for operation
+--- ------------------------------------------------ ----------------------------------
+ 2  PGED3/VREF+/CVREF+/AN0/C3INC/RPA0/CTED1/PMD7/RA0 N/A
+--- ------------------------------------------------ ----------------------------------
+ 3  PGEC3/VREF-/CVREF-/AN1/RPA1/CTED2/PMD6/RA1       N/A
+--- ------------------------------------------------ ----------------------------------
+ 4  PGED1/AN2/C1IND/C2INB/C3IND/RPB0/PMD0/RB0        PGED1
+--- ------------------------------------------------ ----------------------------------
+ 5  PGEC1/AN3/C1INC/C2INA/RPB1/CTED12/PMD1/RB1       PGEC1
+--- ------------------------------------------------ ----------------------------------
+ 6  AN4/C1INB/C2IND/RPB2/SDA2/CTED13/PMD2/RB2        U1RX
+--- ------------------------------------------------ ----------------------------------
+ 7  AN5/C1INA/C2INC/RTCC/RPB3/SCL2/PMWR/RB3          U1TX
+--- ------------------------------------------------ ----------------------------------
+ 8  VSS                                              VSS
+--- ------------------------------------------------ ----------------------------------
+ 9  OSC1/CLKI/RPA2/RA2                               N/A
+--- ------------------------------------------------ ----------------------------------
+10  OSC2/CLKO/RPA3/PMA0/RA3                          N/A
+--- ------------------------------------------------ ----------------------------------
+11  SOSCI/RPB4/RB4                                   N/A
+--- ------------------------------------------------ ----------------------------------
+12  SOSCO/RPA4/T1CK/CTED9/PMA1/RA4                   N/A
+--- ------------------------------------------------ ----------------------------------
+13  VDD                                              VDD
+--- ------------------------------------------------ ----------------------------------
+14  TMS/RPB5/USBID/RB5                               N/A
+--- ------------------------------------------------ ----------------------------------
+15  VBUS                                             VBUS
+--- ------------------------------------------------ ----------------------------------
+16  TDI/RPB7/CTED3/PMD5/INT0/RB7                     LED0
+--- ------------------------------------------------ ----------------------------------
+17  TCK/RPB8/SCL1/CTED10/PMD4/RB8                    LED1
+--- ------------------------------------------------ ----------------------------------
+18  TDO/RPB9/SDA1/CTED4/PMD3/RB9                     N/A
+--- ------------------------------------------------ ----------------------------------
+19  VSS                                              VSS
+--- ------------------------------------------------ ----------------------------------
+20  VCAP                                             VCAP
+--- ------------------------------------------------ ----------------------------------
+21  PGED2/RPB10/D+/CTED11/RB10                       U2RX
+--- ------------------------------------------------ ----------------------------------
+22  PGEC2/RPB11/D-/RB11                              U2TX
+--- ------------------------------------------------ ----------------------------------
+23  VUSB3V3                                          VUSB3V3
+--- ------------------------------------------------ ----------------------------------
+24  AN11/RPB13/CTPLS/PMRD/RB13                       N/A
+--- ------------------------------------------------ ----------------------------------
+25  CVREFOUT/AN10/C3INB/RPB14/VBUSON/SCK1/CTED5/RB14 N/A
+--- ------------------------------------------------ ----------------------------------
+26  AN9/C3INA/RPB15/SCK2/CTED6/PMCS1/RB15            N/A
+--- ------------------------------------------------ ----------------------------------
+27  AVSS                                             AVSS
+--- ------------------------------------------------ ----------------------------------
+28  AVDD                                             AVDD
+--- ------------------------------------------------ ----------------------------------
 
 Additional signals available via Peripheral Pin Selections (PPS)
 ----------------------------------------------------------------
