@@ -646,8 +646,7 @@ config ARCH_BOARD_P32MX270F256B_BARE
 	depends on ARCH_CHIP_PIC32MX270F256B
 	select ARCH_HAVE_LEDS
 	---help---
-		This is the port for the PIC32MX270F256B Processor with just enough
-		hardware to get the chip programmed and running.
+		This is the port for the PIC32MX270F256B Processor with bare hardware.
 
 config ARCH_BOARD_MICROPENDOUS3
 	bool "Opendous Micropendous 3 board"
@@ -2217,6 +2216,7 @@ config ARCH_BOARD
 	default "metro-m4"                 if ARCH_BOARD_METRO_M4
 	default "micropendous3"            if ARCH_BOARD_MICROPENDOUS3
 	default "mirtoo"                   if ARCH_BOARD_MIRTOO
+	default "p32mx270f256b_bare"			 if ARCH_BOARD_P32MX270F256B_BARE
 	default "misoc"                    if ARCH_BOARD_MISOC_QEMU || ARCH_BOARD_MISOC_VERILATOR
 	default "moteino-mega"             if ARCH_BOARD_MOTEINO_MEGA
 	default "ne64badge"                if ARCH_BOARD_NE64BADGE
