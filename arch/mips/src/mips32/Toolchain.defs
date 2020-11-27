@@ -128,7 +128,8 @@ else ifeq ($(CONFIG_ARCH_MIPS_MICROAPTIV), y)
   MIPS_MPROCESSOR = elf32pic32mz
 else
   MIPS_MARCH = m4k
-  MIPS_MPROCESSOR = elf32pic32mx
+  # MIPS_MPROCESSOR = elf32pic32mx
+  MIPS_MPROCESSOR = 32MX270F256B
 endif
 
 # Handle builds for the microMIPS ISA.  Interlinking may be
