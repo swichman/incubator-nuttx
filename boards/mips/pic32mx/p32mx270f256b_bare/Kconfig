@@ -4,11 +4,4 @@
 #
 
 if ARCH_BOARD_P32MX270F256B_BARE
-
-config P32MX270F256B_BARE_RELEASE
-	int "Mirtoo release number"
-	default 2
-	---help---
-		Select the Mirtoo release number.  For example, 1 for release R1.
-
 endif

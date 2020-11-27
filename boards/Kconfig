@@ -641,6 +641,14 @@ config ARCH_BOARD_MIRTOO
 		This is the port to the DTX1-4000L "Mirtoo" module.  This module uses MicroChip
 		PIC32MX250F128D.  See http://www.dimitech.com/ for further information.
 
+config ARCH_BOARD_P32MX270F256B_BARE
+	bool "Bare PIC32MX270f256B board"
+	depends on ARCH_CHIP_PIC32MX270F256B
+	select ARCH_HAVE_LEDS
+	---help---
+		This is the port for the PIC32MX270F256B Processor with just enough
+		hardware to get the chip programmed and running.
+
 config ARCH_BOARD_MICROPENDOUS3
 	bool "Opendous Micropendous 3 board"
 	depends on ARCH_CHIP_AT90USB646 || ARCH_CHIP_AT90USB647 || ARCH_CHIP_AT90USB1286 || ARCH_CHIP_AT90USB1287
@@ -2911,6 +2919,9 @@ source "boards/hc/m9s12/ne64badge/Kconfig"
 endif
 if ARCH_BOARD_MIRTOO
 source "boards/mips/pic32mx/mirtoo/Kconfig"
+endif
+f ARCH_BOARD_P32MX270f256B_BARE
+source "boards/mips/pic32mx/p32mx270f256b_bare/Kconfig"
 endif
 if ARCH_BOARD_PIC32MX_STARTERKIT
 source "boards/mips/pic32mx/pic32mx-starterkit/Kconfig"

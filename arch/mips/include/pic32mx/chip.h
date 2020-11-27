@@ -911,6 +911,42 @@
 #  define CHIP_PSP          0   /* No parallel slave port (?) */
 #  define CHIP_NETHERNET    0   /* No Ethernet */
 #  define CHIP_JTAG         1   /* Has JTAG */
+#elif defined(CONFIG_ARCH_CHIP_PIC32MX270F256B)
+#  undef  CHIP_PIC32MX1
+#  define CHIP_PIC32MX2     1
+#  undef  CHIP_PIC32MX3
+#  undef  CHIP_PIC32MX4
+#  undef  CHIP_PIC32MX5
+#  undef  CHIP_PIC32MX6
+#  undef  CHIP_PIC32MX7
+#  define CHIP_NPINS        28  /* Package VTLA, TQFP, QFN */
+#  define CHIP_MHZ          40  /* 40MHz maximum frequency */
+#  define CHIP_BOOTFLASH_KB 3   /* 3Kb boot FLASH */
+#  define CHIP_PROGFLASH_KB 256 /* 128Kb program FLASH */
+#  define CHIP_DATAMEM_KB   64  /* 32Kb data memory */
+#  undef  CHIP_CHE              /* No pre-fetch cache controller */
+#  define CHIP_NPORTS       2   /* 3 ports (A, B, C) */
+#  define CHIP_NTIMERS      5   /* 5 timers */
+#  define CHIP_NIC          5   /* 5 input capture */
+#  define CHIP_NOC          5   /* 5 output compare */
+#  define CHIP_NDMACH       4   /* 4 programmable DMA channels */
+#  define CHIP_NUSBDMACHAN  2   /* 2 dedicated DMA channels */
+#  define CHIP_CTMU         1   /* Has CTMU */
+#  define CHIP_VRFSEL       1   /* Comparator voltage reference selection */
+#  undef  CHIP_TRACE            /* No trace capability */
+#  define CHIP_NUARTS       2   /* 2 UARTS */
+#  define CHIP_UARTFIFOD    8   /* 8 level deep UART FIFOs */
+#  define CHIP_NSPI         2   /* 2 SPI/I2S interfaces */
+#  define CHIP_NI2C         2   /* 2 I2C interfaces */
+#  define CHIP_NCAN         0   /* No CAN interface */
+#  define CHIP_NADC10       9   /* 13 10-bit ADC channels */
+#  define CHIP_NCM          3   /* 3 Analog comparators */
+#  define CHIP_USBOTG       1   /* Has USB OTG */
+#  define CHIP_RTCC         1   /* Has RTCC */
+#  define CHIP_PMP          1   /* Have parallel master port */
+#  define CHIP_PSP          0   /* No parallel slave port (?) */
+#  define CHIP_NETHERNET    0   /* No Ethernet */
+#  define CHIP_JTAG         1   /* Has JTAG */
 #elif defined(CONFIG_ARCH_CHIP_PIC32MX320F032H)
 #  undef  CHIP_PIC32MX1
 #  undef  CHIP_PIC32MX2
