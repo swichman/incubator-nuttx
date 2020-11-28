@@ -53,6 +53,8 @@
 
 #include <nuttx/irq.h>
 #include <nuttx/arch.h>
+#include <nuttx/fs/ioctl.h>
+#include <nuttx/semaphore.h>
 #include <nuttx/serial/serial.h>
 
 #include <arch/board/board.h>
@@ -68,9 +70,7 @@
 /****************************************************************************
  * Pre-processor Definitions
  ****************************************************************************/
-#ifndef DEBUGASSERT
-#define DEBUGASSERT(f) ASSERT(f)
-#endif
+
 /* If we are not using the serial driver for the console, then we still must
  * provide some minimal implementation of up_putc.
  */
@@ -582,17 +582,17 @@ static int up_ioctl(struct file *filep, int cmd, unsigned long arg)
   struct up_dev_s   *priv;
   int                ret = OK;
 
-  DEBUGASSERT(filep, filep->f_inode);
+  DEBUGASSERT(filep && filep->f_inode);
   inode = filep->f_inode;
   dev   = inode->i_private;
 
-  DEBUGASSERT(dev, dev->priv);
+  DEBUGASSERT(dev && dev->priv);
   priv = (struct up_dev_s *)dev->priv;
 
   switch (cmd)
     {
-    case xxx: /* Add commands here */
-      break;
+    // case xxx: /* Add commands here */
+    //   break;
 
     case TCGETS:
       {
