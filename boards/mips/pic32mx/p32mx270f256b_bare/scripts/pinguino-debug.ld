@@ -41,7 +41,7 @@ MEMORY
      * 0x1d000000 but is always accessed at KSEG0 address 0x9d00:0000
      */
 
-    kseg0_progmem  (rx) : ORIGIN = 0x9d000000, LENGTH = 128K
+    kseg0_progmem  (rx) : ORIGIN = 0x9d000000, LENGTH = 256K
 
     /* The PIC32MX250F128D has 3Kb of boot FLASH at physical addresses
      * 0x1fc00000-0x1fc00c00.  The initial reset vector is in KSEG1, but
@@ -85,7 +85,7 @@ MEMORY
      * at the beginning of this region for use by MPLAB.
      */
 
-    kseg1_datamem (w!x) : ORIGIN = 0xa0000200, LENGTH = 32K - 512
+    kseg1_datamem (w!x) : ORIGIN = 0xa0000200, LENGTH = 64K - 512
 }
 
 OUTPUT_FORMAT("elf32-littlemips")

@@ -63,7 +63,7 @@
 /* Oscillator modes */
 
 #define BOARD_FNOSC_FRCPLL     1        /* Use FRC w/PLL module */
-#define BOARD_POSC_DISABLED    1        /* Disable primary oscillator */
+#define BOARD_POSC_DISABLED    0        /* Disable primary oscillator */
 
 /* PLL configuration and resulting CPU clock.
  * CPU_CLOCK = ((POSC_FREQ / IDIV) * MULT) / ODIV
