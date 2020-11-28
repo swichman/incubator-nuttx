@@ -68,7 +68,9 @@
 /****************************************************************************
  * Pre-processor Definitions
  ****************************************************************************/
-
+#ifndef DEBUGASSERT
+#define DEBUGASSERT(f) ASSERT(f)
+#endif
 /* If we are not using the serial driver for the console, then we still must
  * provide some minimal implementation of up_putc.
  */
